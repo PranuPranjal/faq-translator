@@ -118,7 +118,7 @@ Contributions are welcome to this project! Please follow these guidelines:
 2. **Clone the repository**: 
    ```bash
    git clone repo_url
-   cd faq-translator
+   cd backend
    ```
 3. **Create a new branch**: 
    ```bash
