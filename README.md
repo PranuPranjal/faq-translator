@@ -22,7 +22,7 @@ Follow these steps to set up the application locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/PranuPranjal/faq-translator
    cd backend
    ```
 
