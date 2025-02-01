@@ -4,7 +4,7 @@ const redis = require('ioredis');
 const client = new redis();
 
 const translatetext = new TranslationServiceClient();
-const projectId = 'ivory-mountain-449518-f9';
+const projectId = 'project_id'; //add your google cloud trnaslate project id
 const location = 'global';
 
 //faq from cache(using redis)
