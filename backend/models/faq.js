@@ -1,0 +1,92 @@
+const mongoose = require('mongoose');
+
+const faqSchema = new mongoose.Schema({
+  question: { type: String, required: true },
+  answer: { type: String, required: true },
+  translations: {
+    ques: {
+      hi: { type: String },
+      bn: { type: String },
+      es: { type: String },
+      fr: { type: String },
+      de: { type: String },
+      ar: { type: String },
+      ru: { type: String },
+      ja: { type: String },
+      ko: { type: String },
+      pt: { type: String },
+      it: { type: String },
+      nl: { type: String },
+      tr: { type: String },
+      th: { type: String },
+      vi: { type: String },
+      pl: { type: String },
+      el: { type: String },
+      he: { type: String },
+      sv: { type: String },
+      da: { type: String },
+      fi: { type: String },
+      no: { type: String },
+      ro: { type: String },
+      cs: { type: String },
+      hu: { type: String },
+      id: { type: String },
+      uk: { type: String },
+      tl: { type: String },
+      fa: { type: String },
+      ta: { type: String },
+      te: { type: String },
+      si: { type: String },
+      my: { type: String },
+      ne: { type: String },
+      ur: { type: String },
+      ps: { type: String },
+    },
+    ans:{
+      hi: { type: String },
+      bn: { type: String },
+      es: { type: String },
+      fr: { type: String },
+      de: { type: String },
+      ar: { type: String },
+      ru: { type: String },
+      ja: { type: String },
+      ko: { type: String },
+      pt: { type: String },
+      it: { type: String },
+      nl: { type: String },
+      tr: { type: String },
+      th: { type: String },
+      vi: { type: String },
+      pl: { type: String },
+      el: { type: String },
+      he: { type: String },
+      sv: { type: String },
+      da: { type: String },
+      fi: { type: String },
+      no: { type: String },
+      ro: { type: String },
+      cs: { type: String },
+      hu: { type: String },
+      id: { type: String },
+      uk: { type: String },
+      tl: { type: String },
+      fa: { type: String },
+      ta: { type: String },
+      te: { type: String },
+      si: { type: String },
+      my: { type: String },
+      ne: { type: String },
+      ur: { type: String },
+      ps: { type: String },
+    }
+    
+  }
+});
+
+faqSchema.methods.getTranslation = function (lang) {
+  return this.translations.ques[lang] || this.question;
+};
+
+const FAQ = mongoose.model('FAQ', faqSchema);
+module.exports = FAQ;

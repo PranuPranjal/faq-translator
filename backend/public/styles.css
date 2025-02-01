@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4; 
+}
+
+h1, h2 {
+    color: #333; 
+    text-align: center; 
+}
+
+form {
+    margin-bottom: 30px;
+    background: #fff; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px; 
+    font-weight: bold; 
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; 
+}
+
+button {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 15px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+select {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+}
+
+#faq-list {
+    margin-top: 20px;
+}
+
+.faq-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.faq-item h3 {
+    margin: 0; 
+    color: #007bff; 
+}
+
+.faq-item p {
+    margin: 5px 0 0; 
+    color: #555; 
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+#lang-select {
+    margin-bottom: 20px; 
+}
+
+#languages {
+    margin-bottom: 20px; 
+}
+
+
+.faq-content {
+    flex-grow: 1; 
+}
+  

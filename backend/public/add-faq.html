@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add FAQ</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <div id="app">
+    <h1>Add FAQ</h1>
+    
+    <form id="faq-form">
+      <div>
+        <label for="question">Question</label>
+        <input type="text" id="question" name="question" required>
+      </div>
+      <div>
+        <label for="answer">Answer</label>
+        <textarea id="answerEditor" name="answer" required></textarea>
+      </div>
+      <div>
+        <label for="languages">Languages</label>
+        <div id="languages">
+            <label><input type="checkbox" value="hi"> Hindi</label>
+            <label><input type="checkbox" value="bn"> Bengali</label>
+            <label><input type="checkbox" value="es"> Spanish</label>
+            <label><input type="checkbox" value="fr"> French</label>
+            <label><input type="checkbox" value="de"> German</label>
+            <label><input type="checkbox" value="ar"> Arabic</label>
+            <label><input type="checkbox" value="ru"> Russian</label>
+            <label><input type="checkbox" value="ja"> Japanese</label>
+            <label><input type="checkbox" value="ko"> Korean</label>
+            <label><input type="checkbox" value="pt"> Portuguese</label>
+            <label><input type="checkbox" value="it"> Italian</label>
+            <label><input type="checkbox" value="nl"> Dutch</label>
+            <label><input type="checkbox" value="tr"> Turkish</label>
+            <label><input type="checkbox" value="th"> Thai</label>
+            <label><input type="checkbox" value="vi"> Vietnamese</label>
+            <label><input type="checkbox" value="pl"> Polish</label>
+            <label><input type="checkbox" value="el"> Greek</label>
+            <label><input type="checkbox" value="he"> Hebrew</label>
+            <label><input type="checkbox" value="sv"> Swedish</label>
+            <label><input type="checkbox" value="da"> Danish</label>
+            <label><input type="checkbox" value="fi"> Finnish</label>
+            <label><input type="checkbox" value="no"> Norwegian</label>
+            <label><input type="checkbox" value="ro"> Romanian</label>
+            <label><input type="checkbox" value="cs"> Czech</label>
+            <label><input type="checkbox" value="hu"> Hungarian</label>
+            <label><input type="checkbox" value="id"> Indonesian</label>
+            <label><input type="checkbox" value="uk"> Ukrainian</label>
+            <label><input type="checkbox" value="tl"> Tagalog</label>
+            <label><input type="checkbox" value="fa"> Persian</label>
+            <label><input type="checkbox" value="ta"> Tamil</label>
+            <label><input type="checkbox" value="te"> Telugu</label>
+            <label><input type="checkbox" value="si"> Sinhala</label>
+            <label><input type="checkbox" value="my"> Burmese</label>
+            <label><input type="checkbox" value="ne"> Nepali</label>
+            <label><input type="checkbox" value="ur"> Urdu</label>
+            <label><input type="checkbox" value="ps"> Pashto</label>            
+        </div>
+      </div>
+      <button type="submit">Create FAQ</button>
+    </form>
+  </div>
+  <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor
+        .create(document.querySelector('#answerEditor'))
+        .then(editor => {
+            editor.model.document.on('change:data', () => {
+                const data = editor.getData();
+                document.querySelector('#answerEditor').value = data; 
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html> 
