@@ -38,12 +38,15 @@ Follow these steps to set up the application locally:
    REDIS_URL=your_redis_url
    ```
 
-4. **Start the application**:
+4. **Get google cloud project id**:
+   Crete a new google cloud project and enable google cloud translation api. Paste the project id directly in /controllers/faqController.js or add it in the .env file.
+
+5. **Start the application**:
    ```bash
    npm start
    ```
 
-5. **Run tests** (optional):
+6. **Run tests** (optional):
    ```bash
    npm test
    ```
@@ -89,7 +92,25 @@ The base URL for the API is `http://localhost:5000/api`.
     "translations": { "languages whose translation is needed" }
    }
   ```
-
+- **Data base structure**:
+  ```json
+  {
+    "question": "Input question",
+    "answer": "Input answer",
+    "trsnslations": {
+      "ques": {
+         "hi": "translated question",
+         "bn": "translate question"
+         //more languages
+      },
+      "ans": {
+         "hi": "translatd answer",
+         "bn": "translated answer"
+         //more languages
+      }
+    }
+  }
+  ```
 - **Example cURL Command**:
   ```bash
   curl http://localhost:5000/api/faq
